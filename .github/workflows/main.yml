@@ -11,14 +11,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout manifests
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: redstrate/DalamudPlugins
         path: manifests
         ref: ${{ github.event.pull_request.head.sha }}
 
     - name: Checkout Plogon
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
         repository: goatcorp/Plogon
         path: Plogon
@@ -42,7 +42,7 @@ jobs:
         --mode=Commit --build-all
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: plugin-artifact
         path: artifacts
