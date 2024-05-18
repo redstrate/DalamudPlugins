@@ -27,6 +27,7 @@ jobs:
       run: |
         mkdir artifacts
         mkdir work
+        mkdir output
 
     - name: Run Plogon
       working-directory: Plogon/Plogon
