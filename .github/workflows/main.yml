@@ -1,0 +1,47 @@
+name: Deployment
+on: [push, workflow_dispatch]
+concurrency:
+  group: plogon-deploy
+  cancel-in-progress: true
+
+jobs:
+  run-plogon:
+    name: Build Plugins
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout manifests
+      uses: actions/checkout@v3
+      with:
+        repository: redstrate/DalamudPlugins
+        path: manifests
+        ref: ${{ github.event.pull_request.head.sha }}
+
+    - name: Checkout Plogon
+      uses: actions/checkout@v3
+      with:
+        repository: goatcorp/Plogon
+        path: Plogon
+
+    - name: Create required folders
+      run: |
+        mkdir artifacts
+        mkdir work
+
+    - name: Run Plogon
+      working-directory: Plogon/Plogon
+      run: |
+        dotnet run -- \
+        --manifest-folder="${{ github.workspace }}/manifests" \
+        --output-folder="${{ github.workspace }}/output" \
+        --work-folder="${{ github.workspace }}/work" \
+        --static-folder="${{ github.workspace }}/Plogon/Plogon/static" \
+        --artifact-folder="${{ github.workspace }}/artifacts" \
+        --build-overrides-file="${{ github.workspace }}/manifests/overrides.toml" \
+        --ci --mode=Commit --build-all
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: plugin-artifact
+        path: artifacts
