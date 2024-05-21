@@ -10,6 +10,12 @@ jobs:
     #if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
     - name: Checkout manifests
       uses: actions/checkout@v4
       with:
