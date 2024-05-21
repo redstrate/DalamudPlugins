@@ -49,7 +49,7 @@ jobs:
 
     - name: Upload repository
       run: |
-        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" "${{ github.workspace }}/output" deploy@ryne.moe:/srv/http/dalamud
+        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" "${{ github.workspace }}/output/*" deploy@ryne.moe:/srv/http/dalamud/
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
