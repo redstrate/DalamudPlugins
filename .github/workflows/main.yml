@@ -47,12 +47,13 @@ jobs:
         --build-overrides-file="${{ github.workspace }}/manifests/overrides.toml" \
         --mode=Commit --build-all
 
-    - name: Upload repository
-      run: |
-        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" "${{ github.workspace }}/output/*" deploy@ryne.moe:/srv/http/dalamud/
-
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: plugin-artifact
-        path: artifacts
+        path: output
+
+    - name: Upload repository
+      run: |
+        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" "${{ github.workspace }}/output/*" deploy@ryne.moe:/srv/http/dalamud/
+
