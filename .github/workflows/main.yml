@@ -55,5 +55,5 @@ jobs:
 
     - name: Upload repository
       run: |
-        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" --recursive output deploy@ryne.moe:/srv/http/dalamud
+        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" --recursive output/ deploy@ryne.moe:/srv/http/dalamud
 
