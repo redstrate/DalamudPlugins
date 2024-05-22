@@ -10,6 +10,16 @@ jobs:
     #if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
+    - name: Set up SSH key
+      run: |
+        mkdir -p ~/.ssh
+        echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+
+    - name: Install DalamudRepoTool
+      run: |
+        cargo install --git https://github.com/redstrate/DalamudRepoTool.git
+
     - name: Checkout manifests
       uses: actions/checkout@v4
       with:
@@ -45,4 +55,13 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: plugin-artifact
-        path: artifacts
+        path: output
+
+    - name: Create repo.json
+      run: |
+        DalamudRepoService --repo-path output
+
+    - name: Upload repository
+      run: |
+        rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" --recursive output/ deploy@ryne.moe:/srv/http/dalamud
+
