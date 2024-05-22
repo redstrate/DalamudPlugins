@@ -59,7 +59,7 @@ jobs:
 
     - name: Create repo.json
       run: |
-        DalamudRepoTool --repo-path output
+        DalamudRepoTool --download-host https://dalamud.xiv.zone --repo-path output
 
     - name: Upload repository
       run: |
