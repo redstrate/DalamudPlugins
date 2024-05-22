@@ -16,6 +16,10 @@ jobs:
         echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
 
+    - name: Install DalamudRepoTool
+      run: |
+        cargo install --git https://github.com/redstrate/DalamudRepoTool.git
+
     - name: Checkout manifests
       uses: actions/checkout@v4
       with:
@@ -52,6 +56,10 @@ jobs:
       with:
         name: plugin-artifact
         path: output
+
+    - name: Create repo.json
+      run: |
+        DalamudRepoService --repo-path output
 
     - name: Upload repository
       run: |
