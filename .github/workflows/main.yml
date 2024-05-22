@@ -59,7 +59,7 @@ jobs:
 
     - name: Create repo.json
       run: |
-        DalamudRepoService --repo-path output
+        DalamudRepoTool --repo-path output
 
     - name: Upload repository
       run: |
