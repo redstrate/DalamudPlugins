@@ -7,16 +7,17 @@ concurrency:
 jobs:
   run-plogon:
     name: Build Plugins
-    #if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
     steps:
     - name: Set up SSH key
+      if: github.ref == 'refs/heads/main'
       run: |
         mkdir -p ~/.ssh
         echo "${{ secrets.DEPLOY_PRIVATE_KEY }}" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
 
     - name: Install DalamudRepoTool
+      if: github.ref == 'refs/heads/main'
       run: |
         cargo install --git https://github.com/redstrate/DalamudRepoTool.git
 
@@ -58,10 +59,12 @@ jobs:
         path: output
 
     - name: Create repo.json
+      if: github.ref == 'refs/heads/main'
       run: |
         DalamudRepoTool --download-host https://dalamud.xiv.zone --repo-path output
 
     - name: Upload repository
+      if: github.ref == 'refs/heads/main'
       run: |
         rsync -e "ssh -p 38901 -o StrictHostKeyChecking=no" --recursive output/ deploy@ryne.moe:/srv/http/dalamud
 
