@@ -30,7 +30,7 @@ jobs:
     - name: Checkout Plogon
       uses: actions/checkout@v4
       with:
-        repository: goatcorp/Plogon
+        repository: redstrate/Plogon # temporarily for API_LEVEL 10
         path: Plogon
 
     - name: Create required folders
