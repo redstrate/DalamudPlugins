@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://github.com/redstrate/Rebound.git"
-commit = "0c461ead8d392aaeabb625d18cbe51486c6f4f11"
+commit = "a0c7e3cd7cbe111db7dc16474e40a74921ea9870"
 owners = [ "redstrate" ]
 changelog = ''''''
