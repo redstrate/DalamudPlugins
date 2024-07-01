@@ -5,7 +5,8 @@ This is my personal Dalamud plugin repository.
 ## Contents
 
 * [Hooky](https://github.com/redstrate/Hooky): Send webhooks for events in FFXIV
-* [Rebound](https://github.com/redstrate/Rebound):  Limits bone physics to 60 FPS 
+* [Rebound](https://github.com/redstrate/Rebound): Limits bone physics to 60 FPS
+* [Refitter](https://github.com/redstrate/Refitter): Modify chest bones for specific gear
 
 ## Usage
 
