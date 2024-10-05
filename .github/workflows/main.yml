@@ -50,7 +50,7 @@ jobs:
         --static-folder="${{ github.workspace }}/Plogon/Plogon/static" \
         --artifact-folder="${{ github.workspace }}/artifacts" \
         --build-overrides-file="${{ github.workspace }}/manifests/overrides.toml" \
-        --mode=Commit --build-all
+        --mode=Continuous --build-all
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
