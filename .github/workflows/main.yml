@@ -32,6 +32,7 @@ jobs:
       uses: actions/checkout@v4
       with:
         repository: goatcorp/Plogon
+        ref: 36852908938076743e6007a149758b41a2b03b86 # meh, changes upstream that break Commit mode
         path: Plogon
 
     - name: Create required folders
@@ -50,7 +51,7 @@ jobs:
         --static-folder="${{ github.workspace }}/Plogon/Plogon/static" \
         --artifact-folder="${{ github.workspace }}/artifacts" \
         --build-overrides-file="${{ github.workspace }}/manifests/overrides.toml" \
-        --mode=Continuous --build-all
+        --mode=Commit --build-all
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
