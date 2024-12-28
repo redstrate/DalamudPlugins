@@ -1,0 +1,5 @@
+[plugin]
+repository = "https://github.com/redstrate/EasyFullscreen.git"
+commit = "a867bdabf1ffd060706ace14203ccd697224c796"
+owners = [ "redstrate" ]
+changelog = ''''''

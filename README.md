@@ -8,6 +8,7 @@ This is my personal Dalamud plugin repository.
 * [Rebound](https://github.com/redstrate/Rebound): Limits bone physics to 60 FPS
 * [Refitter](https://github.com/redstrate/Refitter): Modify chest bones for specific gear
 * [Auracite](https://github.com/redstrate/Auracite): Export your FFXIV character in portable, generic formats
+* [EasyFullscreen](https://github.com/redstrate/EasyFullscreen): Make FFXIV act like a good game that can enter and exit fullscreen with F11 
 
 ## Usage
 
