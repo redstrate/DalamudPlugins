@@ -9,6 +9,7 @@ This is my personal Dalamud plugin repository.
 * [Refitter](https://github.com/redstrate/Refitter): Modify chest bones for specific gear
 * [Auracite](https://github.com/redstrate/Auracite): Export your FFXIV character in portable, generic formats
 * [EasyFullscreen](https://github.com/redstrate/EasyFullscreen): Make FFXIV act like a good game that can enter and exit fullscreen with F11 
+* [Scripter](https://github.com/redstrate/Scripter): Inspect the game's Lua state and run custom Lua code
 
 ## Usage
 
