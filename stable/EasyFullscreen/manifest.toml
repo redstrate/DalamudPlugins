@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://github.com/redstrate/EasyFullscreen.git"
-commit = "a867bdabf1ffd060706ace14203ccd697224c796"
+commit = "c700b8bec8fcf4ff9a3e329e31785d6c3e37fc7e"
 owners = [ "redstrate" ]
 changelog = ''''''
