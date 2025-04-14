@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://github.com/redstrate/AllowLoginFail.git"
-commit = "5da3b26a4798ebc79b50b098e622222e70c87970"
+commit = "1ddd23ba9090d6a7ce290b043554a1dbcef679e1"
 owners = [ "redstrate" ]
 changelog = ''''''
