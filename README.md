@@ -10,6 +10,7 @@ This is my personal Dalamud plugin repository.
 * [Auracite](https://github.com/redstrate/Auracite): Export your FFXIV character in portable, generic formats
 * [EasyFullscreen](https://github.com/redstrate/EasyFullscreen): Make FFXIV act like a good game that can enter and exit fullscreen with F11 
 * [Scripter](https://github.com/redstrate/Scripter): Inspect the game's Lua state and run custom Lua code
+* [AllowLoginFail](https://github.com/redstrate/AllowLoginFail): Stop the game from quitting over lobby connection errors
 
 ## Usage
 
