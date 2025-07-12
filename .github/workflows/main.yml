@@ -19,7 +19,7 @@ jobs:
     - name: Install DalamudRepoTool
       if: github.ref == 'refs/heads/main'
       run: |
-        cargo install --git https://github.com/redstrate/DalamudRepoTool.git
+        cargo install --git https://codeberg.org/redstrate/DalamudRepoTool.git
 
     - name: Checkout manifests
       uses: actions/checkout@v4
