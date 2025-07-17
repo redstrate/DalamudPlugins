@@ -4,13 +4,13 @@ This is my personal Dalamud plugin repository.
 
 ## Contents
 
-* [Hooky](https://github.com/redstrate/Hooky): Send webhooks for events in FFXIV
+* [Hooky](https://codeberg.org/redstrate/Hooky): Send webhooks for events in FFXIV
 * [Rebound](https://github.com/redstrate/Rebound): Limits bone physics to 60 FPS
-* [Refitter](https://github.com/redstrate/Refitter): Modify chest bones for specific gear
+* [Refitter](https://codeberg.org/redstrate/Refitter): Modify chest bones for specific gear
 * [Auracite](https://github.com/redstrate/Auracite): Export your FFXIV character in portable, generic formats
-* [EasyFullscreen](https://github.com/redstrate/EasyFullscreen): Make FFXIV act like a good game that can enter and exit fullscreen with F11 
-* [Scripter](https://github.com/redstrate/Scripter): Inspect the game's Lua state and run custom Lua code
-* [AllowLoginFail](https://github.com/redstrate/AllowLoginFail): Stop the game from quitting over lobby connection errors
+* [EasyFullscreen](https://codeberg.org/redstrate/EasyFullscreen): Make FFXIV act like a good game that can enter and exit fullscreen with F11 
+* [Scripter](https://codeberg.org/redstrate/Scripter): Inspect the game's Lua state and run custom Lua code
+* [AllowLoginFail](https://codeberg.org/redstrate/AllowLoginFail): Stop the game from quitting over lobby connection errors
 
 ## Usage
 
