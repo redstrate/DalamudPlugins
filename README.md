@@ -26,4 +26,4 @@ The repository is hosted at `https://dalamud.xiv.zone`. You can also download th
 ## Tools Used
 
 * [Plogon](https://github.com/goatcorp/Plogon) for building the plugins.
-* [DalamudRepoTool](https://github.com/redstrate/DalamudRepoTool) for generating the repo.json from repository state.
+* [DalamudRepoTool](https://codeberg.org/redstrate/DalamudRepoTool) for generating the repo.json from repository state.
