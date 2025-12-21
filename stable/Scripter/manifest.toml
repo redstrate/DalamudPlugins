@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://codeberg.org/redstrate/Scripter.git"
-commit = "84c1897b7e179db471e2b1b86ffd30842be55233"
+commit = "bbee43474bc080f504acf75facb48e14a8e04ae3"
 owners = [ "redstrate" ]
 changelog = ''''''
