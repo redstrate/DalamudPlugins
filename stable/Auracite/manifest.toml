@@ -1,6 +1,6 @@
 [plugin]
 repository = "https://github.com/redstrate/Auracite.git"
-commit = "e3fa3dab5b6880ce869152acc4ea01e18cab160b"
+commit = "6b57f9bd65d0ee33de27c3c9834e8195cd2da437"
 owners = [ "redstrate" ]
 changelog = ''''''
 project_path = "dalamud"

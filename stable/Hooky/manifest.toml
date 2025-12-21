@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://codeberg.org/redstrate/Hooky.git"
-commit = "b6437cb41046721e12aaac10f82e48188246959c"
+commit = "5ef84bc38853c177c9744fa27abe287d5ab11a93"
 owners = [ "redstrate" ]
 changelog = ''''''
