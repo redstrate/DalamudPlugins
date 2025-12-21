@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://codeberg.org/redstrate/Refitter.git"
-commit = "b1f611ac71cf4883ff7c40b4acd6cdb9edbd56d0"
+commit = "f3f41a2cb30d961206c0514ca9b10db50fa859ec"
 owners = [ "redstrate" ]
 changelog = ''''''
