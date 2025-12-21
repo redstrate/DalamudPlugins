@@ -22,14 +22,19 @@ jobs:
         cargo install --git https://codeberg.org/redstrate/DalamudRepoTool.git
 
     - name: Checkout manifests
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: redstrate/DalamudPlugins
         path: manifests
         ref: ${{ github.event.pull_request.head.sha }}
 
+    - name: Setup .NET Core SDK
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: "10.0.x"
+
     - name: Checkout Plogon
-      uses: actions/checkout@v4
+      uses: actions/checkout@v5
       with:
         repository: redstrate/Plogon
         path: Plogon
@@ -54,7 +59,7 @@ jobs:
         --mode=Commit --build-all
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@v6
       with:
         name: plugin-artifact
         path: output
