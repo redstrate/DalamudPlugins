@@ -1,5 +1,5 @@
 [plugin]
 repository = "https://github.com/redstrate/Auracite.git"
-commit = "1b50c54be5354f60881caf53d09ec2b13f9f7279"
+commit = "6fffed7e35ba575ed599858a806b4c8740fb0cb0"
 owners = [ "redstrate" ]
 changelog = ''''''
